@@ -4,3 +4,8 @@ ports:
 tasks:
 - init: npm install
   command: npm run dev
+
+vscode:
+  extensions:
+    - octref.vetur
+    - eamodio.gitlens

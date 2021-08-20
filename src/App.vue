@@ -7,9 +7,7 @@
         <img src="./assets/plus.svg"/>
       </button>
     </div>
-    <div class="flex flex-row justify-center pt-5">
-      <button class="text-center text-white bg-red-600 w-1/12 rounded-full" @click="taskFinish">Fini</button>
-    </div>
+    <finish-button @click="taskFinish"></finish-button>
     <div class="flex flex-col items-center pt-10" v-for="task in tasks" :key="task">
       <task :taskMsg="task" @change="selected"></task>
     </div>
@@ -19,9 +17,10 @@
 <script lang="ts">
 import { defineComponent, reactive, ref } from 'vue'
 import Task from './components/Task.vue'
+import FinishButton from './components/FinishButton.vue'
 
 export default defineComponent({
-  components: { Task },
+  components: { Task, FinishButton },
   name: 'App',
   setup() {
     const taskSelected = reactive([]) as string[]

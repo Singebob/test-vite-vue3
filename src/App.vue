@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive, ref } from 'vue'
-import Task from './components/Task.vue'
+import Task from './components/task/Task.vue'
 
 export default defineComponent({
   components: { Task },

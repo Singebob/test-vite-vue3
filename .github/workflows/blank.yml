@@ -32,3 +32,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build project
         run: npm run build
+
+      - name: Test Unitaire
+        run: npm run test
